@@ -1,0 +1,27 @@
+<h2>Demo Bindings</h2>
+<section>
+  <h3>Property binding</h3>
+  <p>Permet de faire le lien entre le HTML et une propriété présente dans le fichier TS</p>
+
+  <h4>One-way binding</h4>
+  <p>Sert à afficher une propriété (ts => html)</p>
+  <p>Le formateur du jour est {{ formateur }}</p>
+
+  <h4>Two-way binding</h4>
+  <p>Sert à afficher/modifier une propriété (ts <=> html)</p>
+  <input type="text" [(ngModel)]="formateur">
+</section>
+
+<section>
+  <h3>Attribute binding</h3>
+  <p>Permet une liaison entre une propriété (ou du code) et un attribut de balise html</p>
+  <button [disabled]="formateur !== 'Seb'">Hello Seb</button>
+  <button [disabled]="formateur !== 'Mauritcio'">Hello Mauritcio</button>
+</section>
+
+<section>
+  <h3>Event binding</h3>
+  <p>Permet de relier un event à une methode</p>
+  <p>Aujourd'hui on va manger {{ platDuJour }}</p>
+  <button (click)="genererPlat()">Generer plat</button>
+</section>

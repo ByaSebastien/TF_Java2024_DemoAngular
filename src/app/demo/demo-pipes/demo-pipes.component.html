@@ -1,0 +1,32 @@
+<h2>Demo pipes</h2>
+<section>
+  <h3>Les built-in pipes</h3>
+
+  <div>
+    <h4>Les string pipes</h4>
+    <p>Majuscule : {{ myString | uppercase }}</p>
+    <p>Minuscule : {{ myString | lowercase }}</p>
+    <p>Maj sur première lettre : {{ myString | titlecase }}</p>
+  </div>
+
+  <div>
+    <h4>Les number pipes</h4>
+    <p>Arrondir un nombre : {{ myNumber | number : '.0-4' }}</p>
+    <p>Argent : {{ myNumber | currency : 'EUR' }}</p>
+  </div>
+
+  <div>
+    <h4>Le date pipe</h4>
+    <p>{{ now | date }}</p>
+    <p>{{ now | date : 'dd-MM-yy' }}</p>
+    <p>{{ now | date : 'dd MMMM yyyy' }}</p>
+    <p>{{ now | date : 'fullDate' }}</p>
+  </div>
+
+</section>
+
+<section>
+  <h3>Les custom pipes</h3>
+  <p>To celsius : {{ myNumber | toCelcius }}</p>
+  <p>Temperature : {{myNumber |temperature : 'CK'}}</p>
+</section>

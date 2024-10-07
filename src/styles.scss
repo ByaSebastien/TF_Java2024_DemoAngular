@@ -4,3 +4,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+section {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #29737325;
+  h3 {
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid darkcyan;
+  }
+  h4,h3 {
+    margin: 0.5rem 0;
+    color : darkcyan;
+  }
+}
+
+input {
+  height: 2rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border : none;
+  padding: 0 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: darkcyan;
+  color : lightcyan;
+  border : none;
+  border-radius: 0.5rem;
+  &:hover {
+    background-color: darkblue;
+  }
+  &:disabled {
+    background-color: #29737325;
+  }
+}
+
+.error{
+  color: red;
+}
