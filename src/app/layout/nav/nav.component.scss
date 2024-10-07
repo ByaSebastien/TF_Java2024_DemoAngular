@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding: 2px;
+
+    a{
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+}
