@@ -1,0 +1,31 @@
+<h2>Demo input / output</h2>
+<section>
+  <h3>Product list</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prix</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (p of products; track p.id) {
+        <tr>
+          <td>{{ p.name }}</td>
+          <td>{{ p.price | currency : 'EUR' }}</td>
+          <td>
+            <button (click)="setSelectedProducts(p)">❌</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  @if(selectedProducts){
+    <app-confirm-dialog
+      [product]="selectedProducts"
+      (confirmEvent)="reactToConfirmDialog($event)">
+      <p>Contenus html definis au niveau du composant appelant</p>
+    </app-confirm-dialog>
+  }
+</section>

@@ -1,30 +1,16 @@
 <ul>
-  <li>
-    <a routerLink="/">Home</a>
-  </li>
-  <li>
-    <a routerLink="/about">About</a>
-  </li>
-  <li>
-    <a routerLink="/demo">Demo</a>
-    <ul>
-      <li>
-        <a routerLink="/demo/demo01">Demo Bindings</a>
-      </li>
-      <li>
-        <a routerLink="/demo/demo02">Demo Pipes</a>
-      </li>
-      <li>
-        <a routerLink="/demo/demo03">Demo Directives</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a>Exo</a>
-    <ul>
-      <li>
-        <a routerLink="/exo/exo01">Exo Timer</a>
-      </li>
-    </ul>
-  </li>
+  @for (link of links; track link.url){
+    <li>
+      <a [routerLink]="link.url" (click)="togleIsChildrenVisible(link)">{{link.title}}</a>
+      @if(link.isChildrenVisible){
+        <ul>
+          @for(childLink of link.children; track childLink.url){
+            <li>
+              <a [routerLink]="childLink.url">{{childLink.title}}</a>
+            </li>
+          }
+        </ul>
+      }
+    </li>
+  }
 </ul>
