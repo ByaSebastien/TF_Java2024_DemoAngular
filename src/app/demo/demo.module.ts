@@ -7,13 +7,15 @@ import { DemoComponent } from './demo.component';
 import {FormsModule} from '@angular/forms';
 import { DemoPipesComponent } from './demo-pipes/demo-pipes.component';
 import {SharedModule} from '../shared/shared.module';
+import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 
 
 @NgModule({
   declarations: [
     DemoBindingsComponent,
     DemoComponent,
-    DemoPipesComponent
+    DemoPipesComponent,
+    DemoDirectivesComponent
   ],
   imports: [
     CommonModule,

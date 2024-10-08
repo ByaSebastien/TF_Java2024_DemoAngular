@@ -1,1 +1,7 @@
-<p>exo-timer works!</p>
+<h2>Exo timer</h2>
+<section>
+  <h3>{{ totalSeconds | time }}</h3>
+  <button (click)="start()" [disabled]="timer">Start</button>
+  <button (click)="stop()" [disabled]="!timer">Stop</button>
+  <button (click)="reset()" [disabled]="totalSeconds === 0">Reset</button>
+</section>

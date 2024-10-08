@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import { ToCelciusPipe } from './pipes/to-celcius.pipe';
 import { TemperaturePipe } from './pipes/temperature.pipe';
+import { TimePipe } from './pipes/time.pipe';
 
 
 
 @NgModule({
   declarations: [
     ToCelciusPipe,
-    TemperaturePipe
+    TemperaturePipe,
+    TimePipe
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { TemperaturePipe } from './pipes/temperature.pipe';
   exports: [
     FormsModule,
     ToCelciusPipe,
-    TemperaturePipe
+    TemperaturePipe,
+    TimePipe
   ]
 })
 export class SharedModule { }

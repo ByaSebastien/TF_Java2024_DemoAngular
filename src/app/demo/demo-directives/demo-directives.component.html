@@ -1,0 +1,76 @@
+<h2>Demo Directive</h2>
+<section>
+  <h3>Structural directives</h3>
+  <h4>NgIf / {{ '@if' }}</h4>
+
+  <p *ngIf="isConnected ; else elseTemplate">Connected</p>
+  <!--  <p *ngIf="!isConnected">Not Connected</p>-->
+  <ng-template #elseTemplate>
+    <p>Not Connected</p>
+  </ng-template>
+
+  @if (isConnected) {
+    <p>Connected</p>
+  } @else {
+    <p>Not Connected</p>
+  }
+
+  <button (click)="togleIsConnected()">Connect</button>
+
+  <h4>NgFor / {{ '@for' }}</h4>
+  <ul>
+    <li *ngFor="let product of products; let i = index">
+      <p>{{ product.name }} {{ product.price | currency : 'EUR' }}</p>
+    </li>
+  </ul>
+  <hr>
+  <ul>
+    @for (product of products; track product.id; let i = $index) {
+      <li>
+        <p>{{ product.name }} {{ product.price | currency : 'EUR' }}</p>
+      </li>
+    }
+  </ul>
+
+  <h4>NgSwitch / {{ '@switch' }}</h4>
+  <div [ngSwitch]="day">
+    <p *ngSwitchCase="1">Lundi</p>
+    <p *ngSwitchCase="2">Mardi</p>
+    <p *ngSwitchCase="3">Mercredi</p>
+    <p *ngSwitchCase="4">Jeudi</p>
+    <p *ngSwitchCase="5">Vendredi</p>
+    <p *ngSwitchCase="6">Samedi</p>
+    <p *ngSwitchCase="7">Dimanche</p>
+  </div>
+
+  @switch (day){
+    @case (1) {
+      <p>Lundi</p>
+    }
+    @case (2) {
+      <p>Mardi</p>
+    }
+    @case (3) {
+      <p>Mercredi</p>
+    }
+    @case (4) {
+      <p>Jeudi</p>
+    }
+    @case (5) {
+      <p>Vendredi</p>
+    }
+    @case (6) {
+      <p>Samedi</p>
+    }
+    @case (7) {
+      <p>Dimanche</p>
+    }
+  }
+
+</section>
+
+<section>
+  <h3>Component Directives</h3>
+  <p [ngClass]="{light : isDayTime, dark : !isDayTime}">Jacquouille</p>
+  <button (click)="togleIsDayTime()">Jour / nuit</button>
+</section>
