@@ -1,0 +1,8 @@
+<ul>
+  @for(book of books; track book.id){
+    <li>
+      <p>{{book.title}}</p>
+      <button (click)="deleteBook(book.id)">❌</button>
+    </li>
+  }
+</ul>

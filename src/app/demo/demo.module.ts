@@ -10,6 +10,7 @@ import {SharedModule} from '../shared/shared.module';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
 import { ConfirmDialogComponent } from './demo-input-output/confirm-dialog/confirm-dialog.component';
+import { DemoServiceComponent } from './demo-service/demo-service.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ConfirmDialogComponent } from './demo-input-output/confirm-dialog/confi
     DemoPipesComponent,
     DemoDirectivesComponent,
     DemoInputOutputComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    DemoServiceComponent
   ],
   imports: [
     CommonModule,

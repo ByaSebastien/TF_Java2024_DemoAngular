@@ -18,6 +18,7 @@ export class NavComponent {
         {title: 'Demo pipes', url: '/demo/demo02'},
         {title: 'Demo directives', url: '/demo/demo03'},
         {title: 'Demo input / output', url: '/demo/demo04'},
+        {title: 'Demo service', url: '/demo/demo05'},
       ],
       isChildrenVisible: false
     },
