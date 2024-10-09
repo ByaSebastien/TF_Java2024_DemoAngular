@@ -25,6 +25,7 @@ export class NavComponent {
       title: 'Exo',
       children: [
         {title: 'Exo timer', url: '/exo/exo01'},
+        {title: 'Exo shopping list', url: '/exo/exo02'},
       ],
       isChildrenVisible: false
     },

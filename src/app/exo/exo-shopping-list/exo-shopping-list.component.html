@@ -1,0 +1,7 @@
+<h2>Exo Shopping List</h2>
+<section>
+  <input type="text" [(ngModel)]="productName">
+  <input type="number" [(ngModel)]="productQuantity">
+  <button (click)="addProduct()">Ajouter</button>
+  <app-shopping-list [products]="products" (shoppingEvent)="reactToShoppingEvent($event)"></app-shopping-list>
+</section>

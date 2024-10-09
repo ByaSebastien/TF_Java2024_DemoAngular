@@ -1,0 +1,22 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Quantité</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (product of products; track product.id) {
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <button (click)="triggerEvent(ActionType.MINUS_ONE, product.id)">➖</button>
+          <button (click)="triggerEvent(ActionType.PLUS_ONE, product.id)">➕</button>
+          <button (click)="triggerEvent(ActionType.DELETE, product.id)">❌</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
