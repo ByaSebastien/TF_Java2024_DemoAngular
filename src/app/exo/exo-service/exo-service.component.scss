@@ -1,0 +1,13 @@
+table{
+  width: 100%;
+}
+tr{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  th,td{
+    text-align: left;
+    width: 20%;
+  }
+}

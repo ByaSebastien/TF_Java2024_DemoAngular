@@ -1,0 +1,62 @@
+<h2>Demo formulaire</h2>
+<section>
+  <h3>Person form</h3>
+  <form [formGroup]="personForm" (ngSubmit)="submit()">
+    <div>
+      <input type="text" placeholder="Nom" formControlName="lastname">
+      <app-form-error [control]="personForm.get('lastname')"></app-form-error>
+<!--      @if(personForm.get("lastname")?.touched && personForm.get("lastname")?.errors?.['required']){-->
+<!--      <span class="error">Champ requis</span>-->
+<!--      }-->
+<!--      @if(personForm.get("lastname")?.touched && personForm.get("lastname")?.errors?.['maxlength']){-->
+<!--        <span class="error">Error</span>-->
+<!--      }-->
+    </div>
+    <div>
+      <input type="text" placeholder="Prénom" formControlName="firstname">
+      <app-form-error [control]="personForm.get('firstname')"></app-form-error>
+    </div>
+    <div>
+      <input type="date" formControlName="birthdate">
+      <app-form-error [control]="personForm.get('birthdate')"></app-form-error>
+    </div>
+    <div>
+      <input type="email" placeholder="Email" formControlName="email">
+      <app-form-error [control]="personForm.get('email')"></app-form-error>
+    </div>
+    <div>
+      <input type="password" placeholder="Mot de passe" formControlName="password">
+      <app-form-error [control]="personForm.get('password')"></app-form-error>
+    </div>
+    <div>
+      <input type="password" placeholder="Mot de passe de confirmation" formControlName="confirmPassword">
+      <app-form-error [control]="personForm.get('confirmPassword')"></app-form-error>
+      <app-form-error [control]="personForm"></app-form-error>
+    </div>
+    <div>
+      <input type="tel" placeholder="Numéro de téléphone" formControlName="phoneNumber">
+      <app-form-error [control]="personForm.get('phoneNumber')"></app-form-error>
+    </div>
+    <div>
+      <input type="number" placeholder="Nombre frères/soeurs" formControlName="siblings">
+      <app-form-error [control]="personForm.get('siblings')"></app-form-error>
+    </div>
+    <div>
+      <select formControlName="country">
+        <option value="be">Belgique</option>
+        <option value="fr">France</option>
+        <option value="jp">Japon</option>
+        <option value="am">Arménie</option>
+        <option value="br">Bretagne</option>
+      </select>
+      <app-form-error [control]="personForm.get('country')"></app-form-error>
+    </div>
+    <div>
+      <label for="single">Célibataire</label>
+      <input id="single" type="checkbox" formControlName="single">
+    </div>
+    <div>
+      <button type="submit">Envoyer</button>
+    </div>
+  </form>
+</section>

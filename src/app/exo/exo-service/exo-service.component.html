@@ -1,0 +1,32 @@
+<h2>Exo Service</h2>
+<section>
+  <h3>Liste de jeu</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Date de sortie</th>
+      <th>Nombre de joueurs</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(g of games;track g.id){
+      <tr>
+        <td>{{g.title}}</td>
+        <td>{{g.releaseDate | date : 'dd-MM-yyyy'}}</td>
+        <td>{{g.playerMax}}</td>
+        <td>
+          <button (click)="selectGame(g.id)">❌</button>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+  @if(selectedGame){
+  <app-confirm-delete-game
+    [game]="selectedGame"
+    (confirmEvent)="reactToDeleteEvent($event)">
+  </app-confirm-delete-game>
+  }
+</section>

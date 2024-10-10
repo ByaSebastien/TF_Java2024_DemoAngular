@@ -5,6 +5,7 @@ import {DemoPipesComponent} from './demo-pipes/demo-pipes.component';
 import {DemoDirectivesComponent} from './demo-directives/demo-directives.component';
 import {DemoInputOutputComponent} from './demo-input-output/demo-input-output.component';
 import {DemoServiceComponent} from './demo-service/demo-service.component';
+import {DemoFormulaireComponent} from './demo-formulaire/demo-formulaire.component';
 
 const routes: Routes = [
   {path: 'demo01', component: DemoBindingsComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'demo03', component: DemoDirectivesComponent},
   {path: 'demo04', component: DemoInputOutputComponent},
   {path: 'demo05', component: DemoServiceComponent},
+  {path: 'demo06', component: DemoFormulaireComponent},
 ];
 
 @NgModule({

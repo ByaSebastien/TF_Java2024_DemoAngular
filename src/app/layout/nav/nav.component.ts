@@ -19,6 +19,7 @@ export class NavComponent {
         {title: 'Demo directives', url: '/demo/demo03'},
         {title: 'Demo input / output', url: '/demo/demo04'},
         {title: 'Demo service', url: '/demo/demo05'},
+        {title: 'Demo formulaire', url: '/demo/demo06'},
       ],
       isChildrenVisible: false
     },
@@ -27,6 +28,7 @@ export class NavComponent {
       children: [
         {title: 'Exo timer', url: '/exo/exo01'},
         {title: 'Exo shopping list', url: '/exo/exo02'},
+        {title: 'Exo service', url: '/exo/exo03'},
       ],
       isChildrenVisible: false
     },

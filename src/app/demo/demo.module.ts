@@ -11,6 +11,7 @@ import { DemoDirectivesComponent } from './demo-directives/demo-directives.compo
 import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
 import { ConfirmDialogComponent } from './demo-input-output/confirm-dialog/confirm-dialog.component';
 import { DemoServiceComponent } from './demo-service/demo-service.component';
+import { DemoFormulaireComponent } from './demo-formulaire/demo-formulaire.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DemoServiceComponent } from './demo-service/demo-service.component';
     DemoDirectivesComponent,
     DemoInputOutputComponent,
     ConfirmDialogComponent,
-    DemoServiceComponent
+    DemoServiceComponent,
+    DemoFormulaireComponent
   ],
   imports: [
     CommonModule,
